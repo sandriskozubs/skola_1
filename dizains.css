@@ -50,10 +50,12 @@ button {
     box-shadow: 0 0 30px #ff0000, 0 0 60px #ffff00;
     animation: buttonPulse 0.8s infinite alternate;
     transform-origin: center;
+    cursor: pointer; /* CLICKABLE CURSOR */
 }
 
 button:hover {
     animation: explode 0.40s infinite;
+    cursor: pointer; /* CLICKABLE CURSOR ON HOVER */
 }
 
 /* Dramatic border that looks like it's collapsing */
