@@ -1,0 +1,99 @@
+/* APOCALYPTIC DRAMA MODE ACTIVATED */
+
+/* Violent color shifting */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, sans-serif;
+    background: conic-gradient(
+        from 0deg,
+        #ff0000,
+        #ff8800,
+        #ffee00,
+        #00ff00,
+        #00ffee,
+        #0044ff,
+        #aa00ff,
+        #ff00aa,
+        #ff0000
+    );
+    animation: spinBG 4s linear infinite;
+    color: white;
+    text-shadow: 0 0 20px black;
+}
+
+/* Earthquake text */
+body > *:not(button) {
+    font-size: 3rem;
+    animation: quake 0.15s infinite;
+}
+
+/* Nuclear button */
+button {
+    padding: 25px 50px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000 10px,
+        #ffff00 10px,
+        #ffff00 20px
+    );
+    color: white;
+    box-shadow: 0 0 30px #ff0000, 0 0 60px #ffff00;
+    animation: buttonPulse 0.8s infinite alternate;
+    transform-origin: center;
+}
+
+button:hover {
+    animation: explode 0.40s infinite;
+}
+
+/* Dramatic border that looks like it's collapsing */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    animation: borderCollapse 3s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* KEYFRAMES OF CHAOS */
+
+@keyframes spinBG {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes quake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-3px, 2px) rotate(1deg); }
+    50% { transform: translate(3px, -2px) rotate(-1deg); }
+    75% { transform: translate(-2px, -3px) rotate(2deg); }
+    100% { transform: translate(2px, 3px) rotate(-2deg); }
+}
+
+@keyframes buttonPulse {
+    0% { transform: scale(1); box-shadow: 0 0 20px red; }
+    100% { transform: scale(1.2); box-shadow: 0 0 50px yellow; }
+}
+
+@keyframes explode {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.4) rotate(5deg); }
+    100% { transform: scale(0.9) rotate(-5deg); }
+}
+
+@keyframes borderCollapse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(0.95); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 1; }
+}
