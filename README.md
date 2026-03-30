@@ -1,3 +1,0 @@
-# This is a team project
-
-We dont know what were gonna build yet...
