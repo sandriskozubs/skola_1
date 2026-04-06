@@ -1,12 +1,13 @@
 <?php
-session_start();
+
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
 
-require 'db.php';
+require __DIR__ . '/session_secure.php';
+require __DIR__ . '/db.php';
 
 $error = '';
 
