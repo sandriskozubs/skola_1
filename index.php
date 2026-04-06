@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'db.php';
+require 'session_secure.php';
 
 $loggedIn = isset($_SESSION['user_id']);
 
