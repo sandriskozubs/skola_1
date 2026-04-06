@@ -1,7 +1,7 @@
 <?php
-session_start();
-require 'db.php';
-require 'session_secure.php';
+
+require __DIR__ . '/session_secure.php';
+require __DIR__ . '/db.php';
 
 $loggedIn = isset($_SESSION['user_id']);
 

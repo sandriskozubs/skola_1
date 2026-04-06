@@ -7,7 +7,6 @@ ini_set('session.use_strict_mode', 1);
 
 session_start();
 
-
 // Sesijas ID atjaunošana ik pēc 5 minūtēm
 if (!isset($_SESSION['last_regen'])) {
     $_SESSION['last_regen'] = time();
